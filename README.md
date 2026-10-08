@@ -1,22 +1,22 @@
 <div align="center">
 
-<img src="static/leaflens-icon.svg" width="76" alt="LeafLens icon">
+<img src="static/CropScan-icon.svg" width="76" alt="CropScan icon">
 
-# LeafLens
+# CropScan
 
 ### Plant disease screening from leaf images using classical computer vision and ensemble machine learning
 
-LeafLens helps users upload or capture a leaf photo, then returns a ranked screening result for supported peach, bell pepper, and strawberry conditions.
+CropScan helps users upload or capture a leaf photo, then returns a ranked screening result for supported peach, bell pepper, and strawberry conditions.
 
 [Live demo](https://appapppy-ggcd4xhaxeb42jzvaw6rcp.streamlit.app/) · [Source code](https://github.com/LecyLecy/plant-leaf-disease-classifier) · [Notebook](Plant_Disease_Classification_CV.ipynb)
 
 </div>
 
-![LeafLens disease assessment screen](docs/images/leaflens-after-analysis.png)
+![CropScan disease assessment screen](docs/images/CropScan-after-analysis.png)
 
 ## Overview
 
-LeafLens is an end-to-end computer vision application for screening visible plant-leaf conditions from a photograph. It turns an image into interpretable handcrafted features, evaluates those features with trained ensemble models, and presents a clear prediction, confidence score, and top alternative matches.
+CropScan is an end-to-end computer vision application for screening visible plant-leaf conditions from a photograph. It turns an image into interpretable handcrafted features, evaluates those features with trained ensemble models, and presents a clear prediction, confidence score, and top alternative matches.
 
 The project focuses on a practical interaction: add one clear leaf image, select an analysis model, and review the result. Flask provides the local web experience, while a Streamlit interface provides a deployed demo. Both front ends use the same feature-extraction and model-inference package.
 
@@ -26,7 +26,7 @@ The project focuses on a practical interaction: add one clear leaf image, select
 
 | Upload state | Input example | Assessment result |
 | --- | --- | --- |
-| ![LeafLens upload screen](docs/images/leaflens-before-input.png) | ![Example leaf with visible disease pattern](docs/images/leaflens-disease-example.jpg) | ![LeafLens result showing strawberry leaf scorch](docs/images/leaflens-after-analysis.png) |
+| ![CropScan upload screen](docs/images/CropScan-before-input.png) | ![Example leaf with visible disease pattern](docs/images/CropScan-disease-example.jpg) | ![CropScan result showing strawberry leaf scorch](docs/images/CropScan-after-analysis.png) |
 | Choose or capture a photo. | A leaf image is prepared for analysis. | The interface returns the predicted class, confidence, and closest matches. |
 
 ## What users can do
@@ -59,7 +59,7 @@ flowchart LR
     F --> H["Random Forest or XGBoost classifier"]
     G --> I["Ranked prediction and confidence"]
     H --> I
-    I --> J["LeafLens assessment UI"]
+    I --> J["CropScan assessment UI"]
 ```
 
 ### Image preparation and feature engineering
@@ -98,7 +98,7 @@ For camera models, the inference layer applies a small safety-oriented adjustmen
 
 The saved bundles report the following validation metrics. These results describe the repository's held-out validation data, not a guarantee of performance on every field photo, lighting condition, crop variety, or disease outside the six supported classes.
 
-![LeafLens model validation performance](docs/images/model-validation-performance.svg)
+![CropScan model validation performance](docs/images/model-validation-performance.svg)
 
 | Model | Variant | Features | Accuracy | Weighted F1 |
 | --- | --- | ---: | ---: | ---: |
@@ -133,7 +133,7 @@ scripts/
   train_pickles.py              Fast and full model training workflow
   train_camera_robust_pickle.py Camera-focused training and augmentation workflow
 templates/                      Flask HTML templates
-static/                         Styles, browser behavior, and LeafLens icon
+static/                         Styles, browser behavior, and CropScan icon
 tests/                          Feature, bundle, and Flask API tests
 docs/images/                    README screenshots and example input image
 ```
@@ -191,7 +191,7 @@ The suite currently validates:
 
 The training scripts reference a local copy of **New Plant Diseases Dataset (Augmented)**. The repository uses six selected folders from its train and validation splits. The original data package is not included in this repository, and no upstream source URL is recorded in the codebase.
 
-The screenshots and disease example in `docs/images/` document the LeafLens interface and an example input workflow.
+The screenshots and disease example in `docs/images/` document the CropScan interface and an example input workflow.
 
 ## License
 

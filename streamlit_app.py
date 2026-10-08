@@ -20,7 +20,7 @@ MODEL_DIR = BASE_DIR / "models"
 
 
 st.set_page_config(
-    page_title="LeafLens — Plant Disease Classifier",
+    page_title="CropScan — Plant Disease Classifier",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -477,7 +477,7 @@ st.markdown(
     <div class="leaf-header">
       <div class="leaf-brand">
         <span class="leaf-brand-mark">◒</span>
-        <span>LeafLens</span>
+        <span>CropScan</span>
       </div>
       <div class="leaf-system">
         <span class="leaf-system-dot"></span>

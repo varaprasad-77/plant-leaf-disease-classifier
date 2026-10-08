@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
-  <title id="title">LeafLens model validation performance</title>
+  <title id="title">CropScan model validation performance</title>
   <desc id="desc">Full XGBoost has highest validation accuracy and weighted F1 at 98.55 percent. Full Random Forest scores 97.32 percent. Camera Robust and Fast Random Forest score about 91.6 percent.</desc>
   <style>
     .title { fill: #123d2b; font: 500 26px Arial, sans-serif; }
